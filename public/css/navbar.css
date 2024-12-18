@@ -1,0 +1,30 @@
+   /* Styling dan animasi tambahan */
+   nav {
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #e0f2ff; /* Biru muda */
+    color: #007acc; /* Warna biru */
+  }
+
+  /* Dropdown Menu Animation */
+  #navbar-sticky {
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .hidden-navbar {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .visible-navbar {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+  }

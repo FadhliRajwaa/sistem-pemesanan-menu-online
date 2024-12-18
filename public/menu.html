@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Gelora</title>
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="website icon" type="png" href="./img/warkop.jpg" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <!-- CSS AOS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="sticky top-0 z-50 bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex items-center justify-between mx-auto p-4"
+      >
+        <!-- Logo dan Nama Warkop -->
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src="./img/warkop.jpg"
+            class="h-8 rounded-md"
+            alt="Logo Warkop Gelora"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >
+            Warkop Gelora
+          </span>
+        </a>
+
+        <!-- Hamburger Button (Mobile) -->
+        <button
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
+          aria-controls="navbar-user"
+          aria-expanded="false"
+          id="menu-toggle"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        <!-- Menu Navigasi (Dropdown untuk Mobile) -->
+        <div class="hidden md:flex w-full justify-center items-center">
+          <ul
+            class="flex space-x-8 font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                href="tentang.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white"
+                >Tentang Kami</a
+              >
+            </li>
+            <li>
+              <a
+                href="menu.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:text-blue-700 md:dark:text-blue-500 md:hover:text-blue-700 md:p-0 dark:text-white"
+                >Menu Produk</a
+              >
+            </li>
+            <li>
+              <a
+                href="pemesanan.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white"
+                >Pemesanan</a
+              >
+            </li>
+
+            <!-- Tombol untuk Dashboard Admin (Mobile) -->
+            <li>
+              <button
+                onclick="window.location.href='dashboard.html'"
+                class="block py-2 px-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700"
+              >
+                Dashboard Admin
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Dropdown Menu (Mobile) -->
+      <div
+        id="navbar-user"
+        class="absolute top-16 left-0 right-0 bg-gray-50 border-t-2 border-gray-200 dark:bg-gray-800 dark:border-gray-700 md:hidden transition-all transform scale-0 origin-top opacity-0 ease-in-out duration-300"
+      >
+        <ul class="flex flex-col space-y-4 font-medium p-4">
+          <li>
+            <a
+              href="index.html"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >Beranda</a
+            >
+          </li>
+          <li>
+            <a
+              href="tentang.html"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >Tentang Kami</a
+            >
+          </li>
+          <li>
+            <a
+              href="menu.html"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >Menu Produk</a
+            >
+          </li>
+          <li>
+            <a
+              href="pemesanan.html"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >Pemesanan</a
+            >
+          </li>
+
+          <!-- Tombol untuk Dashboard Admin (Mobile) -->
+          <li>
+            <button
+              onclick="window.location.href='dashboard.html'"
+              class="block py-2 px-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700"
+            >
+              Dashboard Admin
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Product Card Grid -->
+    <!-- source: https://github.com/mfg888/Responsive-Tailwind-CSS-Grid/blob/main/index.html -->
+
+    <div class="text-center p-10">
+      <h1 class="font-bold text-4xl mb-4">Spesial Menu Gelora</h1>
+      <h1 class="text-3xl">FOOD</h1>
+    </div>
+
+    <!-- ✅ Grid Section - Starts Here 👇 -->
+    <section
+      id="Projects"
+      class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5"
+    >
+      <!--   ✅ Product card 1 - Starts Here 👇 -->
+      <div
+        class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+      >
+        <a href="#">
+          <img
+            src="./img/Gelora-5.jpg"
+            alt="Product"
+            class="h-80 w-72 object-cover rounded-t-xl"
+          />
+          <div class="px-4 py-3 w-72">
+            <span class="text-gray-400 mr-3 uppercase text-xs"
+              >Aneka Ayam + Nasi</span
+            >
+            <p class="text-lg font-bold text-black truncate block capitalize">
+              Ayam Saus Lada Hitam
+            </p>
+            <div class="flex items-center">
+              <p class="text-lg font-semibold text-black cursor-auto my-3">
+                Rp 19.000
+              </p>
+              <del>
+                <p class="text-sm text-gray-600 cursor-auto ml-2">Rp 25.000</p>
+              </del>
+              <div class="ml-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-bag-plus"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"
+                  />
+                  <path
+                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!--   🛑 Product card 1 - Ends Here  -->
+
+      <!--   ✅ Product card 2 - Starts Here 👇 -->
+      <div
+        class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+      >
+        <a href="#">
+          <img
+            src="./img/Gelora-3.jpeg"
+            alt="Product"
+            class="h-80 w-72 object-cover rounded-t-xl"
+          />
+          <div class="px-4 py-3 w-72">
+            <span class="text-gray-400 mr-3 uppercase text-xs"
+              >Aneka Ayam + Nasi</span
+            >
+            <p class="text-lg font-bold text-black truncate block capitalize">
+              Ayam Cabe Garam
+            </p>
+            <div class="flex items-center">
+              <p class="text-lg font-semibold text-black cursor-auto my-3">
+                Rp 17.000
+              </p>
+              <del>
+                <p class="text-sm text-gray-600 cursor-auto ml-2">Rp 20.000</p>
+              </del>
+              <div class="ml-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-bag-plus"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"
+                  />
+                  <path
+                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!--   🛑 Product card 2 - Ends Here  -->
+
+      <!--   ✅ Product card 3 - Starts Here 👇 -->
+      <div
+        class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+      >
+        <a href="#">
+          <img
+            src="./img/Gelora-2.jpeg"
+            alt="Product"
+            class="h-80 w-72 object-cover rounded-t-xl"
+          />
+          <div class="px-4 py-3 w-72">
+            <span class="text-gray-400 mr-3 uppercase text-xs"
+              >Aneka Ayam + Nasi</span
+            >
+            <p class="text-lg font-bold text-black truncate block capitalize">
+              Ayam Sambal Matah
+            </p>
+            <div class="flex items-center">
+              <p class="text-lg font-semibold text-black cursor-auto my-3">
+                Rp 17.000
+              </p>
+              <del>
+                <p class="text-sm text-gray-600 cursor-auto ml-2">Rp 25.000</p>
+              </del>
+              <div class="ml-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-bag-plus"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"
+                  />
+                  <path
+                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!--   🛑 Product card 3 - Ends Here  -->
+    </section>
+
+    <!-- 🛑 Grid Section - Ends Here -->
+
+    <!-- Support Me via WhatsApp 🙏🥰 -->
+    <script>
+      // Create a floating button for WhatsApp
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create the button element
+        const button = document.createElement("a");
+        button.href = "https://wa.me/6281231712687"; // WhatsApp link with your phone number
+        button.target = "_blank"; // Open link in a new tab
+
+        // Style the button (floating chat button)
+        button.style.position = "fixed";
+        button.style.bottom = "20px";
+        button.style.right = "20px";
+        button.style.padding = "15px";
+        button.style.backgroundColor = "#25D366"; // WhatsApp color
+        button.style.color = "#fff";
+        button.style.borderRadius = "50%";
+        button.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.2)";
+        button.style.fontSize = "24px";
+        button.style.textAlign = "center";
+        button.style.cursor = "pointer";
+        button.innerHTML = "💬"; // Emoji representing chat
+
+        // Append the button to the body
+        document.body.appendChild(button);
+      });
+    </script>
+
+    <!-- Product Card Grid END -->
+
+    <script src="./js/beranda.js"></script>
+  </body>
+</html>

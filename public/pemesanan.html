@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemesanan Gelora</title>
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="website icon" type="png" href="./img/warkop.jpg" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <!-- CSS AOS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="sticky top-0 z-50 bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex items-center justify-between mx-auto p-4"
+      >
+        <!-- Logo dan Nama Warkop -->
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src="./img/warkop.jpg"
+            class="h-8 rounded-md"
+            alt="Logo Warkop Gelora"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >
+            Warkop Gelora
+          </span>
+        </a>
+
+        <!-- Hamburger Button (Mobile) -->
+        <button
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
+          aria-controls="navbar-user"
+          aria-expanded="false"
+          id="menu-toggle"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        <!-- Menu Navigasi (Dropdown untuk Mobile) -->
+        <div class="hidden md:flex w-full justify-center items-center">
+          <ul
+            class="flex space-x-8 font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                href="tentang.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white"
+                >Tentang Kami</a
+              >
+            </li>
+            <li>
+              <a
+                href="menu.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white"
+                >Menu Produk</a
+              >
+            </li>
+            <li>
+              <a
+                href="pemesanan.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:text-blue-700 md:dark:text-blue-500 md:hover:text-blue-700 md:p-0 dark:text-white"
+                >Pemesanan</a
+              >
+            </li>
+
+              <!-- Tombol untuk Dashboard Admin (Mobile) -->
+      <li>
+        <button
+          onclick="window.location.href='dashboard.html'"
+          class="block py-2 px-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700"
+        >
+          Dashboard Admin
+        </button>
+      </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Dropdown Menu (Mobile) -->
+      <div
+        id="navbar-user"
+        class="absolute top-16 left-0 right-0 bg-gray-50 border-t-2 border-gray-200 dark:bg-gray-800 dark:border-gray-700 md:hidden transition-all transform scale-0 origin-top opacity-0 ease-in-out duration-300"
+      >
+        <ul class="flex flex-col space-y-4 font-medium p-4">
+          <li>
+            <a
+              href="index.html"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >Beranda</a
+            >
+          </li>
+          <li>
+            <a
+              href="tentang.html"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >Tentang Kami</a
+            >
+          </li>
+          <li>
+            <a
+              href="menu.html"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >Menu Produk</a
+            >
+          </li>
+          <li>
+            <a
+              href="pemesanan.html"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              >Pemesanan</a
+            >
+          </li>
+
+            <!-- Tombol untuk Dashboard Admin (Mobile) -->
+      <li>
+        <button
+          onclick="window.location.href='dashboard.html'"
+          class="block py-2 px-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700"
+        >
+          Dashboard Admin
+        </button>
+      </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto p-8">
+      <h1 class="text-3xl font-semibold text-center mb-6">Form Pemesanan</h1>
+
+      <form
+      action="http://localhost:5000/submit-order" method="POST"
+      id="form-all"
+      class="bg-gradient-moving animate-background-moving space-y-8 max-w-4xl mx-auto p-6 bg-gray-50 rounded-lg shadow-lg"
+    >
+      <!-- Form Pengguna (Users) -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-800">Data Pengguna</h2>
+        <div class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">
+              Nama <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">
+              Email <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700">
+              Nomor Telepon <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+        </div>
+      </div>
+    
+      <!-- Form Produk (Products) -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-800">Produk yang Dipesan</h2>
+        <div class="space-y-6">
+          <div>
+            <label for="product_name" class="block text-sm font-medium text-gray-700">
+              Nama Produk <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="product_name"
+              name="product_name"
+              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+          <div>
+            <label for="quantity" class="block text-sm font-medium text-gray-700">
+              Jumlah Produk <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+        </div>
+      </div>
+    
+      <!-- Form Pesanan (Orders) -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-800">Detail Pesanan</h2>
+        <div class="space-y-6">
+          <div>
+            <label for="requestPesanan" class="block text-sm font-medium text-gray-700">
+              Request Pesanan (Opsional)
+            </label>
+            <input
+              type="text"
+              id="requestPesanan"
+              name="requestPesanan"
+              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div>
+            <label for="payment_method" class="block text-sm font-medium text-gray-700">
+              Metode Pembayaran <span class="text-red-500">*</span>
+            </label>
+            <select
+              id="payment_method"
+              name="payment_method"
+              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              required
+            >
+              <option value="cash">COD</option>
+              <option value="online_payment">QRIS</option>
+            </select>
+          </div>
+          <div>
+            <label for="delivery_address" class="block text-sm font-medium text-gray-700">
+              Alamat Pengiriman <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="delivery_address"
+              name="delivery_address"
+              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+        </div>
+      </div>
+    
+      <!-- Form Kategori (Categories) -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-800">Kategori Produk</h2>
+        <div class="space-y-6">
+          <div>
+            <label for="category" class="block text-sm font-medium text-gray-700">
+              Kategori <span class="text-red-500">*</span>
+            </label>
+            <select
+              id="category"
+              name="category"
+              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              required
+            >
+              <option value="Food">Makanan</option>
+              <option value="Drinks">Minuman</option>
+              <option value="Snack">Camilan</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Form Ulasan (Review) -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-800">Ulasan Produk</h2>
+        <div class="space-y-6">
+          <div>
+            <label for="rating" class="block text-sm font-medium text-gray-700">
+              Rating <span class="text-red-500">*</span>
+            </label>
+            <select
+              id="rating"
+              name="rating"
+              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              required
+            >
+              <option value="1">1 - Sangat Buruk</option>
+              <option value="2">2 - Buruk</option>
+              <option value="3">3 - Cukup</option>
+              <option value="4">4 - Baik</option>
+              <option value="5">5 - Sangat Baik</option>
+            </select>
+          </div>
+          <div>
+            <label for="review_text" class="block text-sm font-medium text-gray-700">
+              Ulasan Anda <span class="text-red-500">*</span>
+            </label>
+            <textarea
+              id="review_text"
+              name="review_text"
+              rows="4"
+              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              required
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button
+          type="submit"
+          class="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 ease-in-out transform hover:scale-105"
+        >
+          Submit Pemesanan
+        </button>
+      </div>
+    </form>
+    
+    
+
+    <script src="./js/beranda.js"></script>
+    <script src="./js/fetchApi.js"></script>
+    <!-- <script src="./js/handleForm.js"></script> -->
+
+    <!-- AOS Script for animations -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+  </body>
+</html>

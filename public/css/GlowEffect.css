@@ -1,0 +1,65 @@
+.card {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  background: linear-gradient(145deg, var(--tw-gradient-stops));
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+
+#users {
+  background-color: rgba(255, 255, 255, 0.1); /* White with low opacity (very transparent) */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Light shadow to create depth */
+  backdrop-filter: none; /* Remove blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Slight border for a subtle effect */
+}
+
+#orders {
+  background-color: rgba(255, 255, 255, 0.1); /* White with low opacity (very transparent) */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Light shadow to create depth */
+  backdrop-filter: none; /* Remove blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Slight border for a subtle effect */
+}
+
+#products {
+  background-color: rgba(255, 255, 255, 0.1); /* White with low opacity (very transparent) */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Light shadow to create depth */
+  backdrop-filter: none; /* Remove blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Slight border for a subtle effect */
+}
+
+#reviews {
+  background-color: rgba(255, 255, 255, 0.1); /* White with low opacity (very transparent) */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Light shadow to create depth */
+  backdrop-filter: none; /* Remove blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Slight border for a subtle effect */
+}
+
+#categories {
+  background-color: rgba(255, 255, 255, 0.1); /* White with low opacity (very transparent) */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Light shadow to create depth */
+  backdrop-filter: none; /* Remove blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Slight border for a subtle effect */
+}
